@@ -1,3 +1,4 @@
+
 #
 # Copyright 2017 The Android Open Source Project
 #
@@ -35,7 +36,7 @@ PRODUCT_RELEASE_NAME := $(lastword $(subst /, ,$(lastword $(subst _, ,$(firstwor
 CUSTOM_VENDOR := $(lastword $(subst /, ,$(firstword $(subst _, ,$(firstword $(MAKEFILE_LIST))))))
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/$(CUSTOM_VENDOR)/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # OEM Info (automatically taken from device tree path)
 BOARD_VENDOR := $(or $(word 2,$(subst /, ,$(firstword $(MAKEFILE_LIST)))),$(value 2))
